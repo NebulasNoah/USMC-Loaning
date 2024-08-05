@@ -3,7 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>USMC loan project</title>
+    <title>USMC loan project</title>       
+    <style>
+    .collapsible {
+      background-color: #777;
+      color: white;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+    }
+    
+    .active, .collapsible:hover {
+      background-color: #555;
+    }
+    
+    .collapsible:after {
+      content: '\002B';
+      color: white;
+      font-weight: bold;
+      float: right;
+      margin-left: 5px;
+    }
+    
+    .active:after {
+      content: "\2212";
+    }
+    
+    .content {
+      padding: 0 18px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+      background-color: #f1f1f1;
+    }
+    </style>
     <style>
         .USMC-Logo{
             width: 100px;
@@ -41,7 +78,8 @@
           border-radius: 5px;
           cursor: grab;
         }
-      </style>
+    </style>
+
 </head>
 <body>
     <img class="USMC-Logo" src="images/USMC_Logo_Colour.jpeg" alt="USMC Logo">
@@ -76,8 +114,10 @@
         so that you may be allowed to borrow gear from the club.
     </p>
     <hr>
+    <button class="collapsible">Bouldering</button>
+<div class="content">
     <h3>
-        Bouldering
+        Borrowable Gear
     </h3>
     <p>
         <a href="PDF/Boulder Mats.pdf"><button class="my-gear-button">Boulder matts</button>
@@ -106,9 +146,12 @@
         <a href="https://www.youtube.com/watch?v=UlRdMZBZ5vw&list=PLTodUXkQjZwz5XVx12GhgnPdLLPCFqE7i&index=1"><button class="my-video-button">Bouldering skills: how to boulder responsibly</button>
         </a>
     </p>
+    </div>
     <hr>
+    <button class="collapsible">Sport Climbing</button>
+<div class="content">
     <h3>
-        Sport Climbing
+        Borrowable Gear
     </h3>
     <p>
         <a href="PDF/Helmets.pdf"><button class="my-gear-button">Helmets</button></a><br><br>
@@ -125,6 +168,23 @@
         in climbing and is the knot you use to tie into a harness before you climb.<br>
         <a href="https://www.youtube.com/watch?v=GFlwrvggas0"><button class="my-video-button">How to tie a Trace-Eight knot</button></a>
     </p>
+    </div>
     <hr>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+              content.style.maxHeight = null;
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            } 
+          });
+        }
+        </script>
 </body>
 </html>
