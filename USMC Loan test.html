@@ -5,6 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>USMC loan project</title>       
     <style>
+    .margin {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+  body {
+    background-image: url('images/forest.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+  }
+.margin-small{
+  margin-left: 10px;
+}
+.white-box {
+    background-color: white;
+    color: black;
+
+}
     .collapsible {
       background-color: #777;
       color: white;
@@ -81,11 +99,12 @@
     </style>
 
 </head>
-<body>
-    <img class="USMC-Logo" src="images/USMC_Logo_Colour.jpeg" alt="USMC Logo">
+<body class="background">
+  <div class="white-box margin">
     <h1>
-        USMC Gear Borrowing Information:
+      <img class="USMC-Logo" src="images/USMC_Logo_Colour.jpeg" alt="USMC Logo"> USMC Gear Borrowing Information:
     </h1>
+    <div class="margin-small">
     <p>
         USMC allows for it's members to borrow certain pieces of gear. 
         You will be required to sign a liability 
@@ -114,6 +133,7 @@
         This section will go over saftey around each of the equipment thats going to be borrowed and the skills that you have to demonstrate
         so that you may be allowed to borrow gear from the club.
     </p>
+    </div>
     <hr>
     <button class="collapsible">Bouldering</button>
 <div class="content">
@@ -206,11 +226,21 @@
   <p>
 
   </p>
+  </div>
+  
+  <hr>
+  <h2>
+    Checking Gear
+  </h2>
+  <p>
+    It is important when using any peice of gear to be able to check that the gear is in safe enough condition and while the club does 
+    check all gear before lending it out, 
+    mistakes can happen and lowering the chance of these mistakes happening by looking out for signs of damage is always usful.
+  </p>
     
     
     
-    
-    
+  </div>  
     <script>
         var coll = document.getElementsByClassName("collapsible");
         var i;
