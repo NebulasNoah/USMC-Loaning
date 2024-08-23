@@ -6,16 +6,23 @@
     <title>Gear Form</title>
 </head>
 <body>
-    <form>
+    <form action="mailto:borisclark@icloud.com" method="get">
         <p>
             <b>Please enter your details:</b>
         </p>
         <label for="fname">First name:</label><br>
-        <input type="text" id="fname" name="fname" value=""><br>
+        <input type="text" id="fname" name="fname" value="" required><br>
         <label for="lname">Last name:</label><br>
-        <input type="text" id="lname" name="lname" value=""><br>
+        <input type="text" id="lname" name="lname" value="" required><br>
         <label for="email">Email:</label><br>
-        <input type="text" id="email" name="email" value=""><br>
+        <input type="text" id="email" name="email" value="" required><br>
+        <p>
+            <b>When and how long do you want to borrow the gear for?</b>
+        </p>
+        <label for="date">Prefered collection date</label>
+        <input type="date" id="date" name="date" required><br><br>
+        <label for="period">How many days will you have the gear for (Max 10 days)</label>
+        <input type="number" id="period" name="period" min="1" max="10" required>
         <p>
             <b>What Gear would you like to borrow?</b>
         </p>
@@ -32,7 +39,8 @@
         <input type="checkbox" id="Quickdraw" name="Quickdraw" value="Quickdraw">
         <label for="Quickdraw"> Quickdraw</label><br>
         <input type="checkbox" id="Personal anchor" name="Personal anchor" value="Personal anchor">
-        <label for="Personal anchor"> Personal anchor</label><br>
+        <label for="Personal anchor"> Personal anchor</label><br><br>
+        <input type="submit" value="Submit">
       </form>
 </body>
 </html>
